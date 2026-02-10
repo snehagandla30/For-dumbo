@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hey You 💛</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(180deg, #fff7fb, #f3f9ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      padding: 28px 24px 32px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 42px;
+      margin: 0 0 8px;
+      text-align: center;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .apology {
+      background: #fff0f6;
+      border: 2px dashed #ffc2d6;
+      border-radius: 18px;
+      padding: 16px;
+      margin: 16px 0 22px;
+      font-weight: 600;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 15px;
+      cursor: pointer;
+      background: #f0f7ff;
+      transition: transform .05s ease, box-shadow .1s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }    
+    .note {
+      margin-top: 20px;
+      font-family: 'Patrick Hand', cursive;
+      font-size: 20px;
+      text-align: center;
+    }
+    .doodles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      font-size: 22px;
+      opacity: .6;
+    }
+    .doodles span { position: absolute; }
+  </style>
+</head>
+<body>
+  <div class="doodles">
+    <span style="top:6%;left:8%;">✨</span>
+    <span style="top:14%;right:10%;">🌸</span>
+    <span style="bottom:12%;left:12%;">🫧</span>
+    <span style="bottom:10%;right:14%;">💛</span>
+    <span style="top:40%;left:2%;">🥺</span>
+  </div>
+
+  <div class="container">
+    <h1>Hey you… 🥺</h1>
+    <p>
+      This is your official "I'm Sorry" page. Just me being me.
+      You know I rant, overshare, and then overthink… so here we are.
+    </p>
+
+    <div class="apology">
+      I’m genuinely sorry for the part where my actions hurt you and made you feel weird.
+      I didn’t mean to cross any line, and I should’ve handled that situation better.
+      I get why it upset you… and I hate that I was the reason you felt that way. 💔
+    </div>
+
+    <p>
+      Also, I’m owning my mess. Purely my mistake and I know how much it sucks to see your partner doing such a thing,
+      even when u said how much it would bother you, but babe please one last time....🥺
+    </p>
+
+    <div class="buttons">
+      <button onclick="showMsg('angry')">Click this if you are still mad 😒</button>
+      <button onclick="showMsg('dramatic')">Click this if you’re still a little mad but still my person 🥺</button>
+      <button onclick="showMsg('soft')">Click this if you secretly missed me 🫠</button>
+      <button onclick="showMsg('forgive')">Click this if you accept my apology 💌</button>
+      <button onclick="showMsg('trap')">Click this if you love me 👉🏻👈🏻</button>
+    </div>
+
+    <p id="out" class="note"></p>
+  </div>
+
+  <script>
+    function showMsg(type){
+      const el = document.getElementById('out');
+
+      switch(type){
+        case 'angry':
+          el.textContent = "Valid. You can be mad. But I’m still here with puppy eyes 🥺";
+          break;
+        case 'dramatic':
+          el.textContent = "A little mad? Sure. But still my person forever 💖🥹";
+          break;
+        case 'soft':
+          el.textContent = "I knew it. Come here… hug me already. 🫂💛";
+          break;
+        case 'forgive':
+          el.textContent = "Thank you for hearing me out. I’ll do better, promise 💌";
+          break;
+        case 'trap':
+          el.textContent = "Too late to run 😏. Now VC me, I miss your cute face!";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
